@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flashcard App</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #1e1e1e;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+    .card {
+      background: #fff;
+      color: #000;
+      width: 320px;
+      height: 220px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 20px;
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.3s ease-in-out;
+    }
+    .controls {
+      margin-top: 25px;
+    }
+    .controls button {
+      margin: 0 12px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #0077cc;
+      color: #fff;
+      transition: background 0.2s;
+    }
+    .controls button:hover {
+      background: #005fa3;
+    }
+    .instructions {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="flashcard">Loading...</div>
+
+  <div class="controls">
+    <button id="prevBtn">⬅️ Back</button>
+    <button id="flipBtn">🔄 Flip</button>
+    <button id="nextBtn">➡️ Next</button>
+  </div>
+
+  <div class="instructions">
+    Keyboard: ← / A = Back, → / D = Next, Space / Enter = Flip
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,24 +1,34 @@
 {
   "name": "flashcardapp",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A fully offline flashcard application built with Electron, designed for studying and learning on desktop platforms.",
+  "main": "main.js",
+  "author": "Sean James McConville",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron --no-sandbox .",
+    "build:linux": "electron-packager . FlashcardApp --platform=linux --arch=x64 --overwrite",
+    "build:mac": "electron-packager . FlashcardApp --platform=darwin --arch=x64 --overwrite",
+    "build:win": "electron-packager . FlashcardApp --platform=win32 --arch=x64 --overwrite"
   },
+    "devDependencies": {
+    "electron": "^37.2.5",
+    "electron-packager": "^17.1.2"
+  },
+  "keywords": [
+    "flashcards",
+    "study",
+    "learning",
+    "education",
+    "offline",
+    "electron",
+    "desktop",
+    "javascript",
+    "cross-platform"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/smcc1213/FlashcardApp.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/smcc1213/FlashcardApp/issues"
-  },
-  "homepage": "https://github.com/smcc1213/FlashcardApp#readme",
-  "devDependencies": {
-    "electron": "^37.2.5",
-    "electron-packager": "^17.1.2"
-  }
+  "homepage": "https://github.com/smcc1213/FlashcardApp#readme"
 }
