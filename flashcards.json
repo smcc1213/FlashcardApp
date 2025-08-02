@@ -1,22 +1,117 @@
 [
-    {
-        "question": "What is the capital of France?",
-        "answer": "Paris"
-    },
-    {
-        "question": "What is the largest planet in our solar system?",
-        "answer": "Jupiter"
-    },
-    {
-        "question": "Who wrote 'To Kill a Mockingbird'?",
-        "answer": "Harper Lee"
-    },
-    {
-        "question": "What is the chemical symbol for water?",
-        "answer": "H2O"
-    },
-    {
-        "question": "What year did the Titanic sink?",
-        "answer": "1912"
-    }
+  {
+    "question": "You're developing a video streaming app using DynamoDB. You need to search items while ensuring optimal use of provisioned throughput and fast response times. What should you do?",
+    "answer": "Use a Query operation on all large tables.",
+    "explanation": "Query operations in DynamoDB are more efficient than scans and are tuned for faster, selective lookups using indexed keys."
+  },
+  {
+    "question": "Your company needs to federate a directory service with IAM roles for employees in a data center. What must you set up for this? (Select TWO)",
+    "answer": "A) The Identity Provider store\nE) The identity broker",
+    "explanation": "Federation requires a broker to translate credentials and a provider to validate identity against an external source."
+  },
+  {
+    "question": "An IAM user is having trouble creating an Auto Scaling plan when predictive scaling is enabled. What should you check?",
+    "answer": "C) Check that the IAM user is authorized to use the \"iam:CreateServiceLinkedRole\" action.",
+    "explanation": "Predictive scaling requires service-linked roles, which need specific permissions for creation."
+  },
+  {
+    "question": "You're designing partition keys for DynamoDB to maintain optimal throughput. Which value shows good uniformity?",
+    "answer": "A) User ID for applications with a large number of users.",
+    "explanation": "User IDs spread traffic evenly across partitions, avoiding throttling and hot partitions."
+  },
+  {
+    "question": "What is the first step in configuring memory utilization monitoring in CloudWatch for Windows-based EC2 instances?",
+    "answer": "A) Use AWS CLI to configure a new SNS topic notification.",
+    "explanation": "Setting up an SNS topic is the first step in being notified of threshold breaches like memory usage."
+  },
+  {
+    "question": "You are deploying a WordPress app. What AWS resources do you need?",
+    "answer": "Amazon RDS and AWS Elastic Beanstalk.",
+    "explanation": "RDS handles database needs and Elastic Beanstalk simplifies PHP application deployment like WordPress."
+  },
+  {
+    "question": "You're working for a telecom company deploying a local intranet site on WordPress, with minimal future administration. What AWS resources should you use? (Choose all that apply)",
+    "answer": "Amazon RDS and AWS Elastic Beanstalk.",
+    "explanation": "This stack offers managed deployment and storage for WordPress while minimizing admin overhead."
+  },
+  {
+    "question": "To improve Lambda startup performance and ensure environments are pre-warmed, what should you configure?",
+    "answer": "B) Configure provisioned concurrency for the function using the Functions page of the Lambda console.",
+    "explanation": "Provisioned concurrency keeps Lambda containers initialized for faster response times."
+  },
+  {
+    "question": "You\u2019re building an AI-powered chat app and need to handle sign-in/sign-up and event logging. What\u2019s the most efficient solution? (Select TWO)",
+    "answer": "B) Configure sign-in and sign-up using Amazon Cognito\nC) Run API calls using AWS Lambda after authentication events",
+    "explanation": "Cognito is built for user auth, and Lambda can log events post-auth for analytics."
+  },
+  {
+    "question": "You're troubleshooting a high-volume S3 bucket with PUT/DELETE operations and seeing HTTP 503 errors. What can you use to find the root cause?",
+    "answer": "D) Amazon S3 Inventory",
+    "explanation": "S3 Inventory gives metadata and helps diagnose access and performance issues on objects."
+  },
+  {
+    "question": "You're a system operations administrator analyzing performance data in S3 using a serverless SQL solution. Which AWS service should you use?",
+    "answer": "Amazon Athena",
+    "explanation": "Athena allows serverless querying of S3 data using standard SQL without moving the data."
+  },
+  {
+    "question": "You're using AWS X-Ray with a game app and need to filter expressions for searching game IDs. What's the recommended approach?",
+    "answer": "Record Game objects in a metadata block and separately record game IDs in annotations.",
+    "explanation": "Annotations are indexed and allow fast querying in X-Ray for common fields like game IDs."
+  },
+  {
+    "question": "You need to perform analytical processing on near real-time social media data to improve business processes. Which AWS architecture should you use?",
+    "answer": "Import data using Amazon MSK, Lambda, and Kinesis Data Firehose, use AWS Glue to process the data, load into Amazon Redshift, and use QuickSight.",
+    "explanation": "This architecture supports real-time ingest, ETL transformation, storage, and analytics using AWS services."
+  },
+  {
+    "question": "You're designing a video processing platform on AWS. Which architecture ensures scalability, fault tolerance, and extensibility?",
+    "answer": "Use a choreography-based architecture to fanout messages to multiple subscribers.",
+    "explanation": "Choreography decouples services, allowing independent scaling and fault isolation."
+  },
+  {
+    "question": "You're defining a CodeCommit branching strategy. Which two factors should influence your strategy?",
+    "answer": "A) The code authoring tool used by the team.\nE) The number of commit operations done daily on an average.",
+    "explanation": "Tooling and commit frequency affect merge conflicts and repository structure."
+  },
+  {
+    "question": "You need to assign AWS service permissions to IAM users and keep the policies auto-updated as services evolve. What should you do?",
+    "answer": "B) Use full access AWS managed policies to grant full access to services.",
+    "explanation": "AWS-managed policies stay updated with service-level changes, easing maintenance."
+  },
+  {
+    "question": "You need your mobile users to access AWS resources using social login providers. Which API action should you use?",
+    "answer": "A) AssumeRoleWithWebIdentity",
+    "explanation": "This API supports federated login using social identity providers like Facebook or Google."
+  },
+  {
+    "question": "You are running an ECS deployment and need to support rollback between app versions. Which deployment strategy should you use?",
+    "answer": "A) Blue/green",
+    "explanation": "Blue/green deployments run old and new environments in parallel, simplifying rollback."
+  },
+  {
+    "question": "You need to ensure idempotency in shopping transactions using Lambda and DynamoDB. What should you do?",
+    "answer": "A) Stop the transaction in Lambda if there is an existing transaction ID matching the new one.",
+    "explanation": "This logic avoids duplicate processing and ensures operations are idempotent."
+  },
+  {
+    "question": "You need to configure CAPTCHA expiration in your AWS app. What should you do?",
+    "answer": "C) Modify the web ACL settings for the WAF.",
+    "explanation": "Web ACL rules in WAF let you manage how long CAPTCHA validation remains effective."
+  },
+  {
+    "question": "You need to deploy a container image to a Lambda function efficiently. What should you do?",
+    "answer": "D) Upload the image to Amazon ECR and use the ECR image URL in the Lambda console.",
+    "explanation": "Lambda supports container images via ECR, enabling scalable container-based functions."
+  },
+  {
+    "question": "You want to analyze a Java application\u2019s performance and optimize using ML. What should you do?",
+    "answer": "C) Create a profiling group from CodeGuru, grant permissions, add agent, and start profiling.",
+    "explanation": "Amazon CodeGuru Profiler detects high-cost code paths to help reduce latency and costs."
+  },
+  {
+    "question": "You need to modify backend API responses before returning to clients. What should you do?",
+    "answer": "D) Modify the request path, query strings, headers, and status codes for API requests and responses.",
+    "explanation": "API Gateway provides templates and configurations to alter requests and responses mid-flow."
+  }
 ]
