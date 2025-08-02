@@ -113,5 +113,65 @@
     "question": "You need to modify backend API responses before returning to clients. What should you do?",
     "answer": "D) Modify the request path, query strings, headers, and status codes for API requests and responses.",
     "explanation": "API Gateway provides templates and configurations to alter requests and responses mid-flow."
+  },
+    {
+    "question": "Which service allows developers to run code in response to events without provisioning or managing servers, and is best suited for short-running functions?",
+    "answer": "AWS Lambda\n\nAWS Lambda is a serverless compute service that runs code in response to events and automatically manages the compute resources. It\u2019s designed for short-running tasks, typically under 15 minutes."
+  },
+  {
+    "question": "You want to decouple microservices, distributed systems, and serverless applications. Which service should you use?",
+    "answer": "Amazon SQS\n\nAmazon Simple Queue Service (SQS) enables message queuing and decoupling of microservices to allow asynchronous communication between distributed components."
+  },
+  {
+    "question": "What feature allows Amazon SNS to send messages to multiple protocols at once (e.g., Lambda, SQS, email, HTTP)?",
+    "answer": "Fanout\n\nFanout is a pattern where a single message is sent to multiple endpoints simultaneously via SNS topics, allowing parallel processing."
+  },
+  {
+    "question": "What AWS service can help simplify orchestration of multiple Lambda functions and other AWS services in a workflow?",
+    "answer": "AWS Step Functions\n\nStep Functions coordinate multiple AWS services into serverless workflows using visual workflows and state machines."
+  },
+  {
+    "question": "What\u2019s the maximum size of an individual message in Amazon SQS?",
+    "answer": "256 KB\n\nAmazon SQS supports individual messages up to 256 KB in size. For larger payloads, Amazon S3 can be used to store the payload with the pointer sent in the message."
+  },
+  {
+    "question": "In Amazon SNS, how do you ensure messages are delivered in order and only once?",
+    "answer": "Use FIFO topics\n\nFIFO (First-In-First-Out) topics in SNS ensure ordered message delivery and exactly-once processing."
+  },
+  {
+    "question": "Which AWS service can trigger Lambda directly and provides streaming data in near real time?",
+    "answer": "Amazon Kinesis\n\nKinesis is used to process streaming data in near real-time, and can trigger Lambda functions for analytics, monitoring, etc."
+  },
+  {
+    "question": "Which of the following AWS services can be used to create RESTful APIs that trigger Lambda functions?",
+    "answer": "Amazon API Gateway\n\nAPI Gateway allows developers to create, publish, and maintain RESTful APIs that act as \u2018front doors\u2019 to Lambda functions and other backend services."
+  },
+  {
+    "question": "What is the max execution timeout for an AWS Lambda function?",
+    "answer": "15 minutes\n\nAWS Lambda allows functions to run for up to 900 seconds (15 minutes) before timing out."
+  },
+  {
+    "question": "Which service can store time series metrics and is often used for monitoring Lambda performance?",
+    "answer": "Amazon CloudWatch\n\nCloudWatch stores logs and metrics and can be used to monitor, visualize, and alert on Lambda execution data."
+  },
+  {
+    "question": "You are running an AWS deployment that uses Amazon ECS for managing and running containers. You need to select a deployment strategy where old and new versions can be isolated from each other so rollbacks can be done easily. Which deployment strategy should you select?",
+    "answer": "A) Blue/green",
+    "explanation": "Blue/green deployment allows you to run two separate environments (blue and green), enabling rollback by switching traffic back to the previous environment if needed."
+  },
+  {
+    "question": "One of the benefits of envelope encryption, a feature of AWS KMS, is the combination of multiple encryption methods using _____ key algorithms, which are faster and produce smaller ciphertexts and _____ key algorithms, which provide inherent separation of roles and easier key management.",
+    "answer": "A) symmetric; public",
+    "explanation": "Envelope encryption uses symmetric key algorithms for fast and efficient data encryption and public key algorithms for secure key distribution and access separation."
+  },
+  {
+    "question": "You are an AWS developer and are tasked with encrypting an Amazon EBS volume during instance launch. Which of the following statements gives the correct solution?",
+    "answer": "A) You can use either a customer-managed or an AWS-managed Customer Master Key (CMK).",
+    "explanation": "EBS encryption supports using either AWS-managed CMKs or customer-managed CMKs via AWS KMS, allowing flexibility based on your security and compliance needs."
+  },
+  {
+    "question": "You are using JSON payloads for testing AWS Lambda functions. Errors include runtime errors and nonsensical results. Which of these would you look into for debugging the Lambda function? (Select TWO)",
+    "answer": "A) The CodeCommit configuration, E) Event payload values",
+    "explanation": "Incorrect payload values and misconfigured source repositories like CodeCommit are common causes of Lambda issues during test execution."
   }
 ]
