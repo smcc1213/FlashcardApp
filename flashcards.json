@@ -233,14 +233,6 @@
     "answer": "A) Transform"
   },
   {
-    "question": "When using the AWS Node.js SDK, you can pass the AWS credentials to your program using which methods? (Choose three.)",
-    "answer": [
-      "A) Have your program load from a .INI key value file using the Node.js SDK AWS.config.loadFromPath command.",
-      "B) Configure the .aws/credentials file in the default location.",
-      "C) Use the AWS_SDK_LOAD_CONFIG environment variable to point to an AWS profile configuration in a non-default location."
-    ]
-  },
-  {
     "question": "You work for an e-commerce company as an AWS developer. The company has an e-commerce website that needs to run various services, such as order fulfillment and checkout. For this, you need to create a single access point that can be used for grouping multiple endpoints, which include email addresses, AWS Lambda functions, and Amazon SQS. How should you do this?",
     "answer": "B) Use the AWS SDK for Java to create an SNS topic."
   },
@@ -255,5 +247,72 @@
   {
     "question": "You are working to remove errors in a banking application developed using AWS Cloud. You need to ensure that the logs you create using an embedded metric format are stored centrally. You then need to create code to emit custom metrics from your application and then run a root cause analysis to find the source of issues with the application. How should you do this?",
     "answer": "C) Use the PutLogEvents API and then run queries using CloudWatch Logs insights."
+  },
+  {
+    "question": "You are working to remove errors in a banking application developed using AWS Cloud. You need to ensure that the logs you create using an embedded metric format are stored centrally. You then need to create code to emit custom metrics from your application and then run a root cause analysis to find the source of issues with the application. How should you do this?",
+    "answer": "Use the PutLogEvents API and then run queries using CloudWatch Logs Insights.",
+    "explanation": "PutLogEvents lets your app send logs to CloudWatch Logs. CloudWatch Logs Insights helps you query and analyze these logs quickly for troubleshooting and root cause analysis."
+  },
+  {
+    "question": "You are an AWS developer working in a hybrid database environment that currently supports Oracle in an Amazon Elastic Compute Cloud (EC2) environment. You are in the design phase and working on a process to move your database to an Amazon DynamoDB. You want to make sure that you configure the secondary indexes appropriately within your Amazon DynamoDB database. Which of the following is the correct method for configuring secondary indexes?",
+    "answer": "Keep the number of indexes to a minimum.",
+    "explanation": "Minimizing secondary indexes in DynamoDB helps reduce cost, avoid write throttling, and ensures better performance."
+  },
+  {
+    "question": "You are working for Super-Fast Telecom Company as a billing analyst. All billing data files are stored in CSV format within multiple S3 buckets. Your data looks like the following: From time to time you need to extract data only for one CORRESP_TYPE from a particular file. What is your best option?",
+    "answer": "Use S3 Select",
+    "explanation": "S3 Select allows you to retrieve only the data you need using SQL-like expressions, saving bandwidth and time when working with large files."
+  },
+  {
+    "question": "You work for an e-commerce company as an AWS developer. The company has an e-commerce website that needs to run various services, such as order fulfillment and checkout. For this, you need to create a single access point that can be used for grouping multiple endpoints, which include email addresses, AWS Lambda functions, and Amazon SQS. How should you do this?",
+    "answer": "Use the AWS SDK for Java to create an SNS topic",
+    "explanation": "SNS (Simple Notification Service) enables you to group and fan out messages to multiple types of endpoints such as Lambda, email, and SQS queues."
+  },
+  {
+    "question": "When using the AWS Node.js SDK, you can pass the AWS credentials to your program using which methods? (Choose three.)",
+    "answer": [
+      "Configure the .aws/credentials file in the default location.",
+      "Use the AWS_SDK_LOAD_CONFIG environment variable to point to an AWS profile configuration in a non-default location.",
+      "Set the environment variables before running the Node.js tool."
+    ],
+    "explanation": "These three methods are standard for securely passing credentials to your app. Loading from a custom .ini file via SDK methods is not a valid approach."
+  },
+  {
+    "question": "You work as an AWS developer who needs to deploy updates to an application stack in an existing environment. For this you need to work with SAM template files. You need to identify the relevant AWS SAM template files for your project. Which section of the file correctly helps identify an AWS CloudFormation template file as an AWS SAM template file?",
+    "answer": "Transform",
+    "explanation": "The 'Transform' declaration in a SAM template specifies the use of AWS SAM and identifies it to CloudFormation."
+  },
+  {
+    "question": "You work for a web services company as an AWS developer. The company needs to implement a fast and scalable service for managing and running its containers using serverless architectures. For this, you need an Internet-facing load balancer to be configured automatically and a security group made for it as well. What would be the most efficient way to build this solution?",
+    "answer": "Use AWS CDK to create an AWS Fargate service that runs on an Amazon ECS cluster.",
+    "explanation": "Using CDK with Fargate and ECS enables serverless container deployment, automatic provisioning of ALB, and security groups with minimal manual configuration."
+  },
+  {
+    "question": "You are an AWS developer working for a gaming app company. You are developing a customer-facing application that allows users to log in through their mobile devices or web browser. You need to have fine grained control on API endpoints and ensure that users can make GET requests but not make POST requests. Your exposed APIs are deployed on AWS Lambda with requests forwarded to EC2 instances. How would you implement this solution?",
+    "answer": "A) Use a Cognito user pool as a user directory and use JWTs for authentication",
+    "explanation": "Use a Cognito user pool and JSON Web Tokens (JWTs) to manage access. JWTs identify users and map them to IAM policies that restrict API methods like POST. This setup allows GET but blocks POST at the API level."
+  },
+  {
+    "question": "Which two statements are TRUE regarding the use of IAM resource-based policies and IAM identity-based policies?",
+    "answer": [
+      "A) If an IAM identity-based policy allows an identity READ and WRITE access to a resource while a resource-based policy specifies that identity has DENY access to the resource, then the effective access to that resource is DENIED.",
+      "D) IAM resource-based policies can be used to control access to Lambda."
+    ],
+    "explanation": "Explicit DENY always overrides ALLOW. Resource-based policies apply to services like Lambda, which support them for fine-grained access control."
+  },
+  {
+    "question": "An AWS developer on your team needs to improve the company’s storage application by adding caching through ElastiCache for Memcached. You’ve asked them to implement lazy loading. Which pseudocode is correct?",
+    "answer": "D) if (cust_record == null) { cust_record = db.query(\"SELECT * FROM Customer WHERE id = {0}\", cust_id); cache.set(cust_id, cust_record); }",
+    "explanation": "Lazy loading checks the cache first. If the record isn’t there (null), it queries the DB and then updates the cache."
+  },
+  {
+    "question": "You are creating AWS Lambda functions for scientific applications. You need a system to tune performance vs. cost. What should you implement?",
+    "answer": "D) Implement CI/CD processes to use the AWS Lambda Power Tuning Tool",
+    "explanation": "The Lambda Power Tuning Tool helps find the ideal memory-performance-cost balance. Automating it with CI/CD lets you optimize efficiently at scale."
+  },
+  {
+    "question": "You are working on Amazon ECR and need to encrypt docker container data using a symmetric KMS key without exposing the plaintext. Which API key do you use?",
+    "answer": "A) GenerateDataKeyWithoutPlaintext",
+    "explanation": "This API returns only the encrypted key, ideal for scenarios where the plaintext key must never be exposed but will be stored for later encryption."
   }
 ]
