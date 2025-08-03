@@ -170,11 +170,6 @@
     "explanation": "EBS encryption supports using either AWS-managed CMKs or customer-managed CMKs via AWS KMS, allowing flexibility based on your security and compliance needs."
   },
   {
-    "question": "You are using JSON payloads for testing AWS Lambda functions. Errors include runtime errors and nonsensical results. Which of these would you look into for debugging the Lambda function? (Select TWO)",
-    "answer": "A) The CodeCommit configuration, E) Event payload values",
-    "explanation": "Incorrect payload values and misconfigured source repositories like CodeCommit are common causes of Lambda issues during test execution."
-  },
-  {
     "question": "What does the AWS Key Management Service (KMS) use in envelope encryption to separate roles and simplify management?",
     "answer": "Envelope encryption uses symmetric key algorithms for encrypting data (faster, smaller ciphertexts) and public key algorithms for separating roles and key management.",
     "explanation": "Symmetric keys are used for performance; public keys provide separation of duties. Answer: A) symmetric; public"
@@ -231,6 +226,30 @@
   {
     "question": "You work as an AWS developer who needs to deploy updates to an application stack in an existing environment. For this you need to work with SAM template files. You need to identify the relevant AWS SAM template files for your project. Which section of the file correctly helps identify an AWS CloudFormation template file as an AWS SAM template file?",
     "answer": "A) Transform"
+  },
+  {
+    "question": "You need to find a way to ingest very complex application data that has high cardinality as logs and then create metrics from them that are actionable. You need this system to create incident detection in real time. You also need to derie more understanding of operadation events so that a root cause analysis can be done for them. How would you accomplish this?",
+    "answer": "Use the CloudWatch EMF for embedding key data with log event data and use CloudWatch Logs insights for analysis."
+  },
+  {
+    "question": "Which of the following instancee types does NOT work with AWS Elastic Beanstalk?",
+    "answer": "Capacity Reservation Instance"
+  },
+  {
+    "question": "What instance types work with AWS Elastic Beanstalk?",
+    "answer": "On-Demand Instance, Reserved Instance, Spot instance"
+  },
+  {
+    "question": "Your curent application workload can handle between 20,000 and 90,000 consisten reads per second. Druing testing, your previous peak read was 38,000 consistent reads. AFter 10 minutes, your previous peak reads were 80,000 consistent reads per second. What is the behaviour of DynamoDB on-demaned capacity mode?",
+    "answer": "Throttling will occur if previous peak read is doubled within 30 minutes"
+  },
+  {
+    "question": "You have created new Labmda function code for the user authorization system. Before you deploy this code into produciton you need to test the code. What would be the recommeneded apprach for this?",
+    "answer": "Configure CloudWatch for monitoring the system and then deploy the Lambda function into production"
+  },
+  {
+    "question": "You need to ensure emloyees can use IAM roles for performing cryptographic tasks utilizing KMS keys. What will you need to this?",
+    "answer": "Create a key policy"
   },
   {
     "question": "You work for an e-commerce company as an AWS developer. The company has an e-commerce website that needs to run various services, such as order fulfillment and checkout. For this, you need to create a single access point that can be used for grouping multiple endpoints, which include email addresses, AWS Lambda functions, and Amazon SQS. How should you do this?",
@@ -314,5 +333,16 @@
     "question": "You are working on Amazon ECR and need to encrypt docker container data using a symmetric KMS key without exposing the plaintext. Which API key do you use?",
     "answer": "A) GenerateDataKeyWithoutPlaintext",
     "explanation": "This API returns only the encrypted key, ideal for scenarios where the plaintext key must never be exposed but will be stored for later encryption."
+  },
+  {
+    "question": "You need to create an AW deployment for the compant to ensure that the comapnay adherer to relevant regulatory compliance laws. Which of these action will you perform to ensur ean AWS deployment that follows AWS best practices for infomration security and secure access (Pick TWO)?",
+    "answer": "Perform audit logging usign CloudTrail; Use S3 Glacier for archiving senstive data records."
+  },
+  {
+    "question": "You observe errors in the Lambda function through monitoring. The errors include runtime errors and nonsensical reuslts. You now need to perform remediation. Which of these would you look into for deubbing the Lambda Fucntion (Select TWO)?",
+    "answer": "Event payload values; Embedded user input"
+  },
+  {
+
   }
 ]
