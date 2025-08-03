@@ -341,8 +341,5 @@
   {
     "question": "You observe errors in the Lambda function through monitoring. The errors include runtime errors and nonsensical reuslts. You now need to perform remediation. Which of these would you look into for deubbing the Lambda Fucntion (Select TWO)?",
     "answer": "Event payload values; Embedded user input"
-  },
-  {
-
   }
 ]
