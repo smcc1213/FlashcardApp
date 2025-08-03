@@ -173,5 +173,87 @@
     "question": "You are using JSON payloads for testing AWS Lambda functions. Errors include runtime errors and nonsensical results. Which of these would you look into for debugging the Lambda function? (Select TWO)",
     "answer": "A) The CodeCommit configuration, E) Event payload values",
     "explanation": "Incorrect payload values and misconfigured source repositories like CodeCommit are common causes of Lambda issues during test execution."
+  },
+  {
+    "question": "What does the AWS Key Management Service (KMS) use in envelope encryption to separate roles and simplify management?",
+    "answer": "Envelope encryption uses symmetric key algorithms for encrypting data (faster, smaller ciphertexts) and public key algorithms for separating roles and key management.",
+    "explanation": "Symmetric keys are used for performance; public keys provide separation of duties. Answer: A) symmetric; public"
+  },
+  {
+    "question": "Which key types can you use when encrypting an Amazon EBS volume during instance launch?",
+    "answer": "You can use either a customer-managed or an AWS-managed Customer Master Key (CMK).",
+    "explanation": "AWS EBS encryption supports both customer-managed and AWS-managed CMKs. Answer: A)"
+  },
+  {
+    "question": "You're debugging a Lambda function due to runtime errors and nonsensical results. What should you check? (Select two)",
+    "answer": "Check the event payload values and the CodeCommit configuration.",
+    "explanation": "Incorrect inputs or misconfigurations in source control could lead to such errors. Correct choices: A and E"
+  },
+  {
+    "question": "Which AWS service is used for managing and running containers and supports rollback-friendly deployments?",
+    "answer": "Blue/Green deployment strategy is best for rollback because it separates old and new versions.",
+    "explanation": "Blue/Green allows easy rollback by switching traffic between environments. Correct answer: A)"
+  },
+  {
+    "question": "What is the default behavior of an IAM role session when a developer assumes it without specifying duration?",
+    "answer": "The default session duration is one hour.",
+    "explanation": "IAM role sessions have a default duration of 1 hour unless otherwise specified. Answer: A)"
+  },
+  {
+    "question": "What’s the primary benefit of using X-Ray in Lambda functions?",
+    "answer": "It helps trace requests across services to identify bottlenecks and failures.",
+    "explanation": "AWS X-Ray is designed for performance tracing and debugging in distributed systems. Answer: C)"
+  },
+  {
+    "question": "What are the two correct ways to improve performance for high-read DynamoDB workloads?",
+    "answer": "Use DAX and read replicas.",
+    "explanation": "DAX provides in-memory caching; replicas help distribute read load. Answers: A and D"
+  },
+  {
+    "question": "What tool should you use to package and deploy serverless applications?",
+    "answer": "Use the AWS SAM CLI.",
+    "explanation": "SAM CLI is built for deploying and managing serverless applications. Answer: B)"
+  },
+  {
+    "question": "Which CloudWatch feature allows you to track Lambda invocations in near real time?",
+    "answer": "CloudWatch Logs and CloudWatch Metrics.",
+    "explanation": "Metrics capture invocation stats; Logs capture detailed behavior. Answers: A and D"
+  },
+  {
+    "question": "Which deployment type updates ECS containers with minimal downtime and supports rollback?",
+    "answer": "Blue/Green deployment.",
+    "explanation": "Blue/Green separates new and old environments, allowing seamless rollback. Answer: A)"
+  },
+  {
+    "question": "You work for a web services company as an AWS developer. The company needs to implement a fast and scalable service for managing and running its containers using serverless architectures. For this, you need an Internet-facing load balancer to be configured automatically and a security group made for it as well. What would be the most efficient way to build this solution?",
+    "answer": "D) Use AWS CDK to create an AWS Fargate service that runs on an Amazon ECS cluster."
+  },
+  {
+    "question": "You work as an AWS developer who needs to deploy updates to an application stack in an existing environment. For this you need to work with SAM template files. You need to identify the relevant AWS SAM template files for your project. Which section of the file correctly helps identify an AWS CloudFormation template file as an AWS SAM template file?",
+    "answer": "A) Transform"
+  },
+  {
+    "question": "When using the AWS Node.js SDK, you can pass the AWS credentials to your program using which methods? (Choose three.)",
+    "answer": [
+      "A) Have your program load from a .INI key value file using the Node.js SDK AWS.config.loadFromPath command.",
+      "B) Configure the .aws/credentials file in the default location.",
+      "C) Use the AWS_SDK_LOAD_CONFIG environment variable to point to an AWS profile configuration in a non-default location."
+    ]
+  },
+  {
+    "question": "You work for an e-commerce company as an AWS developer. The company has an e-commerce website that needs to run various services, such as order fulfillment and checkout. For this, you need to create a single access point that can be used for grouping multiple endpoints, which include email addresses, AWS Lambda functions, and Amazon SQS. How should you do this?",
+    "answer": "B) Use the AWS SDK for Java to create an SNS topic."
+  },
+  {
+    "question": "You are working for Super-Fast Telecom Company as a billing analyst. All billing data files are stored in CSV format within multiple S3 buckets. Your data looks like the following: From time to time you need to extract data only for one CORRESP_TYPE from a particular file. What is your best option?",
+    "answer": "C) Use S3 Select"
+  },
+  {
+    "question": "You are an AWS developer working in a hybrid database environment that currently supports Oracle in an Amazon Elastic Compute Cloud (EC2) environment. You are in the design phase and working on a process to move your database to an Amazon DynamoDB. You want to make sure that you configure the secondary indexes appropriately within your Amazon DynamoDB database. Which of the following is the correct method for configuring secondary indexes?",
+    "answer": "A) Keep the number of indexes to a minimum."
+  },
+  {
+    "question": "You are working to remove errors in a banking application developed using AWS Cloud. You need to ensure that the logs you create using an embedded metric format are stored centrally. You then need to create code to emit custom metrics from your application and then run a root cause analysis to find the source of issues with the application. How should you do this?",
+    "answer": "C) Use the PutLogEvents API and then run queries using CloudWatch Logs insights."
   }
 ]
