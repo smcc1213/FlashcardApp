@@ -105,7 +105,7 @@
     "explanation": "Lambda supports container images via ECR, enabling scalable container-based functions."
   },
   {
-    "question": "You want to analyze a Java application\u2019s performance and optimize using ML. What should you do?",
+    "question": "You want to analyze a Java application’s performance and optimize using ML. What should you do?",
     "answer": "C) Create a profiling group from CodeGuru, grant permissions, add agent, and start profiling.",
     "explanation": "Amazon CodeGuru Profiler detects high-cost code paths to help reduce latency and costs."
   },
@@ -116,7 +116,7 @@
   },
   {
     "question": "Which service allows developers to run code in response to events without provisioning or managing servers, and is best suited for short-running functions?",
-    "answer": "AWS Lambda\n\nAWS Lambda is a serverless compute service that runs code in response to events and automatically manages the compute resources. It\u2019s designed for short-running tasks, typically under 15 minutes."
+    "answer": "AWS Lambda\n\nAWS Lambda is a serverless compute service that runs code in response to events and automatically manages the compute resources. It’s designed for short-running tasks, typically under 15 minutes."
   },
   {
     "question": "You want to decouple microservices, distributed systems, and serverless applications. Which service should you use?",
@@ -131,7 +131,7 @@
     "answer": "AWS Step Functions\n\nStep Functions coordinate multiple AWS services into serverless workflows using visual workflows and state machines."
   },
   {
-    "question": "What\u2019s the maximum size of an individual message in Amazon SQS?",
+    "question": "What’s the maximum size of an individual message in Amazon SQS?",
     "answer": "256 KB\n\nAmazon SQS supports individual messages up to 256 KB in size. For larger payloads, Amazon S3 can be used to store the payload with the pointer sent in the message."
   },
   {
@@ -144,7 +144,7 @@
   },
   {
     "question": "Which of the following AWS services can be used to create RESTful APIs that trigger Lambda functions?",
-    "answer": "Amazon API Gateway\n\nAPI Gateway allows developers to create, publish, and maintain RESTful APIs that act as \u2018front doors\u2019 to Lambda functions and other backend services."
+    "answer": "Amazon API Gateway\n\nAPI Gateway allows developers to create, publish, and maintain RESTful APIs that act as ‘front doors’ to Lambda functions and other backend services."
   },
   {
     "question": "What is the max execution timeout for an AWS Lambda function?",
@@ -595,13 +595,6 @@
     "domain": "Misc"
   },
   {
-    "question_number": 37,
-    "question": "What is the default event source for CloudWatch Events?",
-    "answer": "AWS services",
-    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
-    "domain": "Misc"
-  },
-  {
     "question_number": 38,
     "question": "What AWS service can be used for GraphQL APIs?",
     "answer": "AWS AppSync",
@@ -623,38 +616,10 @@
     "domain": "Misc"
   },
   {
-    "question_number": 41,
-    "question": "What AWS service can be used for GraphQL APIs?",
-    "answer": "AWS AppSync",
-    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
-    "domain": "Misc"
-  },
-  {
     "question_number": 42,
     "question": "What is the default event source for CloudWatch Events?",
     "answer": "AWS services",
     "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
-    "domain": "Misc"
-  },
-  {
-    "question_number": 43,
-    "question": "What AWS service can be used for GraphQL APIs?",
-    "answer": "AWS AppSync",
-    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
-    "domain": "Misc"
-  },
-  {
-    "question_number": 44,
-    "question": "What AWS service can be used for GraphQL APIs?",
-    "answer": "AWS AppSync",
-    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
-    "domain": "Misc"
-  },
-  {
-    "question_number": 45,
-    "question": "What AWS service can be used for GraphQL APIs?",
-    "answer": "AWS AppSync",
-    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
     "domain": "Misc"
   },
   {
@@ -679,13 +644,6 @@
     "domain": "Misc"
   },
   {
-    "question_number": 49,
-    "question": "What is the default event source for CloudWatch Events?",
-    "answer": "AWS services",
-    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
-    "domain": "Misc"
-  },
-  {
     "question_number": 50,
     "question": "What AWS service can be used for GraphQL APIs?",
     "answer": "AWS AppSync",
@@ -694,41 +652,6 @@
   },
   {
     "question_number": 51,
-    "question": "What is the max size of a Lambda deployment package?",
-    "answer": "50 MB zipped (direct upload)",
-    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
-    "domain": "Misc"
-  },
-  {
-    "question_number": 52,
-    "question": "What is the default event source for CloudWatch Events?",
-    "answer": "AWS services",
-    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
-    "domain": "Misc"
-  },
-  {
-    "question_number": 53,
-    "question": "What is the default event source for CloudWatch Events?",
-    "answer": "AWS services",
-    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
-    "domain": "Misc"
-  },
-  {
-    "question_number": 54,
-    "question": "What is the default event source for CloudWatch Events?",
-    "answer": "AWS services",
-    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
-    "domain": "Misc"
-  },
-  {
-    "question_number": 55,
-    "question": "What is the default event source for CloudWatch Events?",
-    "answer": "AWS services",
-    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
-    "domain": "Misc"
-  },
-  {
-    "question_number": 56,
     "question": "What is the max size of a Lambda deployment package?",
     "answer": "50 MB zipped (direct upload)",
     "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
@@ -1096,20 +1019,6 @@
     "question": "What is the default event source for CloudWatch Events?",
     "answer": "AWS services",
     "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
-    "domain": "Misc"
-  },
-  {
-    "question_number": 109,
-    "question": "What AWS service can be used for GraphQL APIs?",
-    "answer": "AWS AppSync",
-    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
-    "domain": "Misc"
-  },
-  {
-    "question_number": 110,
-    "question": "What AWS service can be used for GraphQL APIs?",
-    "answer": "AWS AppSync",
-    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
     "domain": "Misc"
   },
   {
