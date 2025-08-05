@@ -114,7 +114,7 @@
     "answer": "D) Modify the request path, query strings, headers, and status codes for API requests and responses.",
     "explanation": "API Gateway provides templates and configurations to alter requests and responses mid-flow."
   },
-    {
+  {
     "question": "Which service allows developers to run code in response to events without provisioning or managing servers, and is best suited for short-running functions?",
     "answer": "AWS Lambda\n\nAWS Lambda is a serverless compute service that runs code in response to events and automatically manages the compute resources. It\u2019s designed for short-running tasks, typically under 15 minutes."
   },

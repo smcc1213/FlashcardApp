@@ -9,11 +9,14 @@
     "start": "electron --no-sandbox .",
     "build:linux": "electron-packager . FlashcardApp --platform=linux --arch=x64 --overwrite",
     "build:mac": "electron-packager . FlashcardApp --platform=darwin --arch=x64 --overwrite",
-    "build:win": "electron-packager . FlashcardApp --platform=win32 --arch=x64 --overwrite"
+    "build:win": "electron-packager . FlashcardApp --platform=win32 --arch=x64 --overwrite",
+    "prettier:fix": "prettier --write .",
+    "prettier:check": "prettier --check ."
   },
-    "devDependencies": {
+  "devDependencies": {
     "electron": "^37.2.5",
-    "electron-packager": "^17.1.2"
+    "electron-packager": "^17.1.2",
+    "prettier": "^3.6.2"
   },
   "keywords": [
     "flashcards",

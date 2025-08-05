@@ -2,18 +2,18 @@ let flashcards = [];
 let currentIndex = 0;
 let showingFront = true;
 
-const cardEl = document.getElementById("flashcard");
-const flipBtn = document.getElementById("flipBtn");
-const nextBtn = document.getElementById("nextBtn");
-const prevBtn = document.getElementById("prevBtn");
+const cardEl = document.getElementById('flashcard');
+const flipBtn = document.getElementById('flipBtn');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
 
 async function loadFlashcardsOffline() {
   try {
-    const res = await fetch("flashcards.json");
+    const res = await fetch('flashcards.json');
     flashcards = shuffle(await res.json());
     showCard();
   } catch (err) {
-    cardEl.textContent = "Failed to load flashcards.";
+    cardEl.textContent = 'Failed to load flashcards.';
     console.error(err);
   }
 }
@@ -24,14 +24,13 @@ function shuffle(array) {
 
 function showCard() {
   if (flashcards.length === 0) {
-    cardEl.textContent = "No flashcards.";
+    cardEl.textContent = 'No flashcards.';
     return;
   }
 
   const card = flashcards[currentIndex];
   if (showingFront) cardEl.innerHTML = `<div class="question">${card.question}</div>`;
   else cardEl.textContent = card.answer;
-  
 }
 
 function flipCard() {
@@ -51,15 +50,15 @@ function prevCard() {
   showCard();
 }
 
-flipBtn.addEventListener("click", flipCard);
-nextBtn.addEventListener("click", nextCard);
-prevBtn.addEventListener("click", prevCard);
+flipBtn.addEventListener('click', flipCard);
+nextBtn.addEventListener('click', nextCard);
+prevBtn.addEventListener('click', prevCard);
 
-document.addEventListener("keydown", (e) => {
+document.addEventListener('keydown', e => {
   const key = e.key.toLowerCase();
-  if (key === "arrowright" || key === "d") nextCard();
-  else if (key === "arrowleft" || key === "a") prevCard();
-  else if (key === " " || key === "enter") {
+  if (key === 'arrowright' || key === 'd') nextCard();
+  else if (key === 'arrowleft' || key === 'a') prevCard();
+  else if (key === ' ' || key === 'enter') {
     e.preventDefault();
     flipCard();
   }
