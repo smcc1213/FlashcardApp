@@ -29,7 +29,9 @@ function showCard() {
   }
 
   const card = flashcards[currentIndex];
-  cardEl.textContent = showingFront ? card.question : card.answer;
+  if (showingFront) cardEl.innerHTML = `<div class="question">${card.question}</div>`;
+  else cardEl.textContent = card.answer;
+  
 }
 
 function flipCard() {
