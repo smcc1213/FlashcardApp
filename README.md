@@ -97,8 +97,8 @@ You can use the included `aws_dva_c02_strictly_unique_125_flashcards.json` to ge
 This project uses [Prettier](https://prettier.io/) for code style:
 
 ```bash
-npm run format
-npm run format:check
+npm run prettier:fix
+npm run prettier:check
 ```
 
 The `.prettierrc` configuration file is already included.
@@ -108,3 +108,4 @@ The `.prettierrc` configuration file is already included.
 ## 📄 License
 
 MIT License — free for personal or commercial use.
+
