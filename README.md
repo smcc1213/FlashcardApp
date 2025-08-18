@@ -3,6 +3,7 @@
 This is a cross-platform flashcard study app built with [Electron](https://www.electronjs.org/). It runs **fully offline** and uses a local `.json` file to load and display your questions, answers, and explanations.
 
 > Designed specifically to help you pass the **AWS Certified Developer – Associate (DVA-C02)** exam.
+> Use this flashcard application for any topic you would like! Just update the flashcards.json file to fit your needs.
 
 ---
 
@@ -82,13 +83,13 @@ You can use the included `aws_dva_c02_strictly_unique_125_flashcards.json` to ge
 
 ## 💻 Keyboard Shortcuts
 
-| Key          | Action            |
-|--------------|-------------------|
-| `→` / `n`    | Next card         |
-| `←` / `b`    | Previous card     |
-| `space`      | Flip card         |
-| `r`          | Shuffle deck      |
-| `esc`        | Reset & flip back |
+| Key       | Action            |
+| --------- | ----------------- |
+| `→` / `n` | Next card         |
+| `←` / `b` | Previous card     |
+| `space`   | Flip card         |
+| `r`       | Shuffle deck      |
+| `esc`     | Reset & flip back |
 
 ---
 
@@ -108,4 +109,3 @@ The `.prettierrc` configuration file is already included.
 ## 📄 License
 
 MIT License — free for personal or commercial use.
-
