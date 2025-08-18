@@ -10,6 +10,7 @@
     "build:linux": "electron-packager . FlashcardApp --platform=linux --arch=x64 --overwrite",
     "build:mac": "electron-packager . FlashcardApp --platform=darwin --arch=x64 --overwrite",
     "build:win": "electron-packager . FlashcardApp --platform=win32 --arch=x64 --overwrite",
+    "dist": "npm run build:linux && npm run build:mac && npm runn build:win"
     "prettier:fix": "prettier --write .",
     "prettier:check": "prettier --check ."
   },
