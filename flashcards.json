@@ -1,0 +1,1094 @@
+[
+  {
+    "question": "You're developing a video streaming app using DynamoDB. You need to search items while ensuring optimal use of provisioned throughput and fast response times. What should you do?",
+    "answer": "Use a Query operation on all large tables.",
+    "explanation": "Query operations in DynamoDB are more efficient than scans and are tuned for faster, selective lookups using indexed keys."
+  },
+  {
+    "question": "Your company needs to federate a directory service with IAM roles for employees in a data center. What must you set up for this? (Select TWO)",
+    "answer": "A) The Identity Provider store\nE) The identity broker",
+    "explanation": "Federation requires a broker to translate credentials and a provider to validate identity against an external source."
+  },
+  {
+    "question": "An IAM user is having trouble creating an Auto Scaling plan when predictive scaling is enabled. What should you check?",
+    "answer": "C) Check that the IAM user is authorized to use the \"iam:CreateServiceLinkedRole\" action.",
+    "explanation": "Predictive scaling requires service-linked roles, which need specific permissions for creation."
+  },
+  {
+    "question": "You're designing partition keys for DynamoDB to maintain optimal throughput. Which value shows good uniformity?",
+    "answer": "A) User ID for applications with a large number of users.",
+    "explanation": "User IDs spread traffic evenly across partitions, avoiding throttling and hot partitions."
+  },
+  {
+    "question": "What is the first step in configuring memory utilization monitoring in CloudWatch for Windows-based EC2 instances?",
+    "answer": "A) Use AWS CLI to configure a new SNS topic notification.",
+    "explanation": "Setting up an SNS topic is the first step in being notified of threshold breaches like memory usage."
+  },
+  {
+    "question": "You are deploying a WordPress app. What AWS resources do you need?",
+    "answer": "Amazon RDS and AWS Elastic Beanstalk.",
+    "explanation": "RDS handles database needs and Elastic Beanstalk simplifies PHP application deployment like WordPress."
+  },
+  {
+    "question": "You're working for a telecom company deploying a local intranet site on WordPress, with minimal future administration. What AWS resources should you use? (Choose all that apply)",
+    "answer": "Amazon RDS and AWS Elastic Beanstalk.",
+    "explanation": "This stack offers managed deployment and storage for WordPress while minimizing admin overhead."
+  },
+  {
+    "question": "To improve Lambda startup performance and ensure environments are pre-warmed, what should you configure?",
+    "answer": "B) Configure provisioned concurrency for the function using the Functions page of the Lambda console.",
+    "explanation": "Provisioned concurrency keeps Lambda containers initialized for faster response times."
+  },
+  {
+    "question": "You\u2019re building an AI-powered chat app and need to handle sign-in/sign-up and event logging. What\u2019s the most efficient solution? (Select TWO)",
+    "answer": "B) Configure sign-in and sign-up using Amazon Cognito\nC) Run API calls using AWS Lambda after authentication events",
+    "explanation": "Cognito is built for user auth, and Lambda can log events post-auth for analytics."
+  },
+  {
+    "question": "You're troubleshooting a high-volume S3 bucket with PUT/DELETE operations and seeing HTTP 503 errors. What can you use to find the root cause?",
+    "answer": "D) Amazon S3 Inventory",
+    "explanation": "S3 Inventory gives metadata and helps diagnose access and performance issues on objects."
+  },
+  {
+    "question": "You're a system operations administrator analyzing performance data in S3 using a serverless SQL solution. Which AWS service should you use?",
+    "answer": "Amazon Athena",
+    "explanation": "Athena allows serverless querying of S3 data using standard SQL without moving the data."
+  },
+  {
+    "question": "You're using AWS X-Ray with a game app and need to filter expressions for searching game IDs. What's the recommended approach?",
+    "answer": "Record Game objects in a metadata block and separately record game IDs in annotations.",
+    "explanation": "Annotations are indexed and allow fast querying in X-Ray for common fields like game IDs."
+  },
+  {
+    "question": "You need to perform analytical processing on near real-time social media data to improve business processes. Which AWS architecture should you use?",
+    "answer": "Import data using Amazon MSK, Lambda, and Kinesis Data Firehose, use AWS Glue to process the data, load into Amazon Redshift, and use QuickSight.",
+    "explanation": "This architecture supports real-time ingest, ETL transformation, storage, and analytics using AWS services."
+  },
+  {
+    "question": "You're designing a video processing platform on AWS. Which architecture ensures scalability, fault tolerance, and extensibility?",
+    "answer": "Use a choreography-based architecture to fanout messages to multiple subscribers.",
+    "explanation": "Choreography decouples services, allowing independent scaling and fault isolation."
+  },
+  {
+    "question": "You're defining a CodeCommit branching strategy. Which two factors should influence your strategy?",
+    "answer": "A) The code authoring tool used by the team.\nE) The number of commit operations done daily on an average.",
+    "explanation": "Tooling and commit frequency affect merge conflicts and repository structure."
+  },
+  {
+    "question": "You need to assign AWS service permissions to IAM users and keep the policies auto-updated as services evolve. What should you do?",
+    "answer": "B) Use full access AWS managed policies to grant full access to services.",
+    "explanation": "AWS-managed policies stay updated with service-level changes, easing maintenance."
+  },
+  {
+    "question": "You need your mobile users to access AWS resources using social login providers. Which API action should you use?",
+    "answer": "A) AssumeRoleWithWebIdentity",
+    "explanation": "This API supports federated login using social identity providers like Facebook or Google."
+  },
+  {
+    "question": "You are running an ECS deployment and need to support rollback between app versions. Which deployment strategy should you use?",
+    "answer": "A) Blue/green",
+    "explanation": "Blue/green deployments run old and new environments in parallel, simplifying rollback."
+  },
+  {
+    "question": "You need to ensure idempotency in shopping transactions using Lambda and DynamoDB. What should you do?",
+    "answer": "A) Stop the transaction in Lambda if there is an existing transaction ID matching the new one.",
+    "explanation": "This logic avoids duplicate processing and ensures operations are idempotent."
+  },
+  {
+    "question": "You need to configure CAPTCHA expiration in your AWS app. What should you do?",
+    "answer": "C) Modify the web ACL settings for the WAF.",
+    "explanation": "Web ACL rules in WAF let you manage how long CAPTCHA validation remains effective."
+  },
+  {
+    "question": "You need to deploy a container image to a Lambda function efficiently. What should you do?",
+    "answer": "D) Upload the image to Amazon ECR and use the ECR image URL in the Lambda console.",
+    "explanation": "Lambda supports container images via ECR, enabling scalable container-based functions."
+  },
+  {
+    "question": "You want to analyze a Java application’s performance and optimize using ML. What should you do?",
+    "answer": "C) Create a profiling group from CodeGuru, grant permissions, add agent, and start profiling.",
+    "explanation": "Amazon CodeGuru Profiler detects high-cost code paths to help reduce latency and costs."
+  },
+  {
+    "question": "You need to modify backend API responses before returning to clients. What should you do?",
+    "answer": "D) Modify the request path, query strings, headers, and status codes for API requests and responses.",
+    "explanation": "API Gateway provides templates and configurations to alter requests and responses mid-flow."
+  },
+  {
+    "question": "Which service allows developers to run code in response to events without provisioning or managing servers, and is best suited for short-running functions?",
+    "answer": "AWS Lambda\n\nAWS Lambda is a serverless compute service that runs code in response to events and automatically manages the compute resources. It’s designed for short-running tasks, typically under 15 minutes."
+  },
+  {
+    "question": "You want to decouple microservices, distributed systems, and serverless applications. Which service should you use?",
+    "answer": "Amazon SQS\n\nAmazon Simple Queue Service (SQS) enables message queuing and decoupling of microservices to allow asynchronous communication between distributed components."
+  },
+  {
+    "question": "What feature allows Amazon SNS to send messages to multiple protocols at once (e.g., Lambda, SQS, email, HTTP)?",
+    "answer": "Fanout\n\nFanout is a pattern where a single message is sent to multiple endpoints simultaneously via SNS topics, allowing parallel processing."
+  },
+  {
+    "question": "What AWS service can help simplify orchestration of multiple Lambda functions and other AWS services in a workflow?",
+    "answer": "AWS Step Functions\n\nStep Functions coordinate multiple AWS services into serverless workflows using visual workflows and state machines."
+  },
+  {
+    "question": "What’s the maximum size of an individual message in Amazon SQS?",
+    "answer": "256 KB\n\nAmazon SQS supports individual messages up to 256 KB in size. For larger payloads, Amazon S3 can be used to store the payload with the pointer sent in the message."
+  },
+  {
+    "question": "In Amazon SNS, how do you ensure messages are delivered in order and only once?",
+    "answer": "Use FIFO topics\n\nFIFO (First-In-First-Out) topics in SNS ensure ordered message delivery and exactly-once processing."
+  },
+  {
+    "question": "Which AWS service can trigger Lambda directly and provides streaming data in near real time?",
+    "answer": "Amazon Kinesis\n\nKinesis is used to process streaming data in near real-time, and can trigger Lambda functions for analytics, monitoring, etc."
+  },
+  {
+    "question": "Which of the following AWS services can be used to create RESTful APIs that trigger Lambda functions?",
+    "answer": "Amazon API Gateway\n\nAPI Gateway allows developers to create, publish, and maintain RESTful APIs that act as ‘front doors’ to Lambda functions and other backend services."
+  },
+  {
+    "question": "What is the max execution timeout for an AWS Lambda function?",
+    "answer": "15 minutes\n\nAWS Lambda allows functions to run for up to 900 seconds (15 minutes) before timing out."
+  },
+  {
+    "question": "Which service can store time series metrics and is often used for monitoring Lambda performance?",
+    "answer": "Amazon CloudWatch\n\nCloudWatch stores logs and metrics and can be used to monitor, visualize, and alert on Lambda execution data."
+  },
+  {
+    "question": "You are running an AWS deployment that uses Amazon ECS for managing and running containers. You need to select a deployment strategy where old and new versions can be isolated from each other so rollbacks can be done easily. Which deployment strategy should you select?",
+    "answer": "A) Blue/green",
+    "explanation": "Blue/green deployment allows you to run two separate environments (blue and green), enabling rollback by switching traffic back to the previous environment if needed."
+  },
+  {
+    "question": "One of the benefits of envelope encryption, a feature of AWS KMS, is the combination of multiple encryption methods using _____ key algorithms, which are faster and produce smaller ciphertexts and _____ key algorithms, which provide inherent separation of roles and easier key management.",
+    "answer": "A) symmetric; public",
+    "explanation": "Envelope encryption uses symmetric key algorithms for fast and efficient data encryption and public key algorithms for secure key distribution and access separation."
+  },
+  {
+    "question": "You are an AWS developer and are tasked with encrypting an Amazon EBS volume during instance launch. Which of the following statements gives the correct solution?",
+    "answer": "A) You can use either a customer-managed or an AWS-managed Customer Master Key (CMK).",
+    "explanation": "EBS encryption supports using either AWS-managed CMKs or customer-managed CMKs via AWS KMS, allowing flexibility based on your security and compliance needs."
+  },
+  {
+    "question": "What does the AWS Key Management Service (KMS) use in envelope encryption to separate roles and simplify management?",
+    "answer": "Envelope encryption uses symmetric key algorithms for encrypting data (faster, smaller ciphertexts) and public key algorithms for separating roles and key management.",
+    "explanation": "Symmetric keys are used for performance; public keys provide separation of duties. Answer: A) symmetric; public"
+  },
+  {
+    "question": "Which key types can you use when encrypting an Amazon EBS volume during instance launch?",
+    "answer": "You can use either a customer-managed or an AWS-managed Customer Master Key (CMK).",
+    "explanation": "AWS EBS encryption supports both customer-managed and AWS-managed CMKs. Answer: A)"
+  },
+  {
+    "question": "You're debugging a Lambda function due to runtime errors and nonsensical results. What should you check? (Select two)",
+    "answer": "Check the event payload values and the CodeCommit configuration.",
+    "explanation": "Incorrect inputs or misconfigurations in source control could lead to such errors. Correct choices: A and E"
+  },
+  {
+    "question": "Which AWS service is used for managing and running containers and supports rollback-friendly deployments?",
+    "answer": "Blue/Green deployment strategy is best for rollback because it separates old and new versions.",
+    "explanation": "Blue/Green allows easy rollback by switching traffic between environments. Correct answer: A)"
+  },
+  {
+    "question": "What is the default behavior of an IAM role session when a developer assumes it without specifying duration?",
+    "answer": "The default session duration is one hour.",
+    "explanation": "IAM role sessions have a default duration of 1 hour unless otherwise specified. Answer: A)"
+  },
+  {
+    "question": "What’s the primary benefit of using X-Ray in Lambda functions?",
+    "answer": "It helps trace requests across services to identify bottlenecks and failures.",
+    "explanation": "AWS X-Ray is designed for performance tracing and debugging in distributed systems. Answer: C)"
+  },
+  {
+    "question": "What are the two correct ways to improve performance for high-read DynamoDB workloads?",
+    "answer": "Use DAX and read replicas.",
+    "explanation": "DAX provides in-memory caching; replicas help distribute read load. Answers: A and D"
+  },
+  {
+    "question": "What tool should you use to package and deploy serverless applications?",
+    "answer": "Use the AWS SAM CLI.",
+    "explanation": "SAM CLI is built for deploying and managing serverless applications. Answer: B)"
+  },
+  {
+    "question": "Which CloudWatch feature allows you to track Lambda invocations in near real time?",
+    "answer": "CloudWatch Logs and CloudWatch Metrics.",
+    "explanation": "Metrics capture invocation stats; Logs capture detailed behavior. Answers: A and D"
+  },
+  {
+    "question": "Which deployment type updates ECS containers with minimal downtime and supports rollback?",
+    "answer": "Blue/Green deployment.",
+    "explanation": "Blue/Green separates new and old environments, allowing seamless rollback. Answer: A)"
+  },
+  {
+    "question": "You work for a web services company as an AWS developer. The company needs to implement a fast and scalable service for managing and running its containers using serverless architectures. For this, you need an Internet-facing load balancer to be configured automatically and a security group made for it as well. What would be the most efficient way to build this solution?",
+    "answer": "D) Use AWS CDK to create an AWS Fargate service that runs on an Amazon ECS cluster."
+  },
+  {
+    "question": "You work as an AWS developer who needs to deploy updates to an application stack in an existing environment. For this you need to work with SAM template files. You need to identify the relevant AWS SAM template files for your project. Which section of the file correctly helps identify an AWS CloudFormation template file as an AWS SAM template file?",
+    "answer": "A) Transform"
+  },
+  {
+    "question": "You need to find a way to ingest very complex application data that has high cardinality as logs and then create metrics from them that are actionable. You need this system to create incident detection in real time. You also need to derie more understanding of operadation events so that a root cause analysis can be done for them. How would you accomplish this?",
+    "answer": "Use the CloudWatch EMF for embedding key data with log event data and use CloudWatch Logs insights for analysis."
+  },
+  {
+    "question": "Which of the following instancee types does NOT work with AWS Elastic Beanstalk?",
+    "answer": "Capacity Reservation Instance"
+  },
+  {
+    "question": "What instance types work with AWS Elastic Beanstalk?",
+    "answer": "On-Demand Instance, Reserved Instance, Spot instance"
+  },
+  {
+    "question": "Your curent application workload can handle between 20,000 and 90,000 consisten reads per second. Druing testing, your previous peak read was 38,000 consistent reads. AFter 10 minutes, your previous peak reads were 80,000 consistent reads per second. What is the behaviour of DynamoDB on-demaned capacity mode?",
+    "answer": "Throttling will occur if previous peak read is doubled within 30 minutes"
+  },
+  {
+    "question": "You have created new Labmda function code for the user authorization system. Before you deploy this code into produciton you need to test the code. What would be the recommeneded apprach for this?",
+    "answer": "Configure CloudWatch for monitoring the system and then deploy the Lambda function into production"
+  },
+  {
+    "question": "You need to ensure emloyees can use IAM roles for performing cryptographic tasks utilizing KMS keys. What will you need to this?",
+    "answer": "Create a key policy"
+  },
+  {
+    "question": "You work for an e-commerce company as an AWS developer. The company has an e-commerce website that needs to run various services, such as order fulfillment and checkout. For this, you need to create a single access point that can be used for grouping multiple endpoints, which include email addresses, AWS Lambda functions, and Amazon SQS. How should you do this?",
+    "answer": "B) Use the AWS SDK for Java to create an SNS topic."
+  },
+  {
+    "question": "You are working for Super-Fast Telecom Company as a billing analyst. All billing data files are stored in CSV format within multiple S3 buckets. Your data looks like the following: From time to time you need to extract data only for one CORRESP_TYPE from a particular file. What is your best option?",
+    "answer": "C) Use S3 Select"
+  },
+  {
+    "question": "You are an AWS developer working in a hybrid database environment that currently supports Oracle in an Amazon Elastic Compute Cloud (EC2) environment. You are in the design phase and working on a process to move your database to an Amazon DynamoDB. You want to make sure that you configure the secondary indexes appropriately within your Amazon DynamoDB database. Which of the following is the correct method for configuring secondary indexes?",
+    "answer": "A) Keep the number of indexes to a minimum."
+  },
+  {
+    "question": "You are working to remove errors in a banking application developed using AWS Cloud. You need to ensure that the logs you create using an embedded metric format are stored centrally. You then need to create code to emit custom metrics from your application and then run a root cause analysis to find the source of issues with the application. How should you do this?",
+    "answer": "C) Use the PutLogEvents API and then run queries using CloudWatch Logs insights."
+  },
+  {
+    "question": "You are working to remove errors in a banking application developed using AWS Cloud. You need to ensure that the logs you create using an embedded metric format are stored centrally. You then need to create code to emit custom metrics from your application and then run a root cause analysis to find the source of issues with the application. How should you do this?",
+    "answer": "Use the PutLogEvents API and then run queries using CloudWatch Logs Insights.",
+    "explanation": "PutLogEvents lets your app send logs to CloudWatch Logs. CloudWatch Logs Insights helps you query and analyze these logs quickly for troubleshooting and root cause analysis."
+  },
+  {
+    "question": "You are an AWS developer working in a hybrid database environment that currently supports Oracle in an Amazon Elastic Compute Cloud (EC2) environment. You are in the design phase and working on a process to move your database to an Amazon DynamoDB. You want to make sure that you configure the secondary indexes appropriately within your Amazon DynamoDB database. Which of the following is the correct method for configuring secondary indexes?",
+    "answer": "Keep the number of indexes to a minimum.",
+    "explanation": "Minimizing secondary indexes in DynamoDB helps reduce cost, avoid write throttling, and ensures better performance."
+  },
+  {
+    "question": "You are working for Super-Fast Telecom Company as a billing analyst. All billing data files are stored in CSV format within multiple S3 buckets. Your data looks like the following: From time to time you need to extract data only for one CORRESP_TYPE from a particular file. What is your best option?",
+    "answer": "Use S3 Select",
+    "explanation": "S3 Select allows you to retrieve only the data you need using SQL-like expressions, saving bandwidth and time when working with large files."
+  },
+  {
+    "question": "You work for an e-commerce company as an AWS developer. The company has an e-commerce website that needs to run various services, such as order fulfillment and checkout. For this, you need to create a single access point that can be used for grouping multiple endpoints, which include email addresses, AWS Lambda functions, and Amazon SQS. How should you do this?",
+    "answer": "Use the AWS SDK for Java to create an SNS topic",
+    "explanation": "SNS (Simple Notification Service) enables you to group and fan out messages to multiple types of endpoints such as Lambda, email, and SQS queues."
+  },
+  {
+    "question": "When using the AWS Node.js SDK, you can pass the AWS credentials to your program using which methods? (Choose three.)",
+    "answer": [
+      "Configure the .aws/credentials file in the default location.",
+      "Use the AWS_SDK_LOAD_CONFIG environment variable to point to an AWS profile configuration in a non-default location.",
+      "Set the environment variables before running the Node.js tool."
+    ],
+    "explanation": "These three methods are standard for securely passing credentials to your app. Loading from a custom .ini file via SDK methods is not a valid approach."
+  },
+  {
+    "question": "You work as an AWS developer who needs to deploy updates to an application stack in an existing environment. For this you need to work with SAM template files. You need to identify the relevant AWS SAM template files for your project. Which section of the file correctly helps identify an AWS CloudFormation template file as an AWS SAM template file?",
+    "answer": "Transform",
+    "explanation": "The 'Transform' declaration in a SAM template specifies the use of AWS SAM and identifies it to CloudFormation."
+  },
+  {
+    "question": "You work for a web services company as an AWS developer. The company needs to implement a fast and scalable service for managing and running its containers using serverless architectures. For this, you need an Internet-facing load balancer to be configured automatically and a security group made for it as well. What would be the most efficient way to build this solution?",
+    "answer": "Use AWS CDK to create an AWS Fargate service that runs on an Amazon ECS cluster.",
+    "explanation": "Using CDK with Fargate and ECS enables serverless container deployment, automatic provisioning of ALB, and security groups with minimal manual configuration."
+  },
+  {
+    "question": "You are an AWS developer working for a gaming app company. You are developing a customer-facing application that allows users to log in through their mobile devices or web browser. You need to have fine grained control on API endpoints and ensure that users can make GET requests but not make POST requests. Your exposed APIs are deployed on AWS Lambda with requests forwarded to EC2 instances. How would you implement this solution?",
+    "answer": "A) Use a Cognito user pool as a user directory and use JWTs for authentication",
+    "explanation": "Use a Cognito user pool and JSON Web Tokens (JWTs) to manage access. JWTs identify users and map them to IAM policies that restrict API methods like POST. This setup allows GET but blocks POST at the API level."
+  },
+  {
+    "question": "Which two statements are TRUE regarding the use of IAM resource-based policies and IAM identity-based policies?",
+    "answer": [
+      "A) If an IAM identity-based policy allows an identity READ and WRITE access to a resource while a resource-based policy specifies that identity has DENY access to the resource, then the effective access to that resource is DENIED.",
+      "D) IAM resource-based policies can be used to control access to Lambda."
+    ],
+    "explanation": "Explicit DENY always overrides ALLOW. Resource-based policies apply to services like Lambda, which support them for fine-grained access control."
+  },
+  {
+    "question": "An AWS developer on your team needs to improve the company’s storage application by adding caching through ElastiCache for Memcached. You’ve asked them to implement lazy loading. Which pseudocode is correct?",
+    "answer": "D) if (cust_record == null) { cust_record = db.query(\"SELECT * FROM Customer WHERE id = {0}\", cust_id); cache.set(cust_id, cust_record); }",
+    "explanation": "Lazy loading checks the cache first. If the record isn’t there (null), it queries the DB and then updates the cache."
+  },
+  {
+    "question": "You are creating AWS Lambda functions for scientific applications. You need a system to tune performance vs. cost. What should you implement?",
+    "answer": "D) Implement CI/CD processes to use the AWS Lambda Power Tuning Tool",
+    "explanation": "The Lambda Power Tuning Tool helps find the ideal memory-performance-cost balance. Automating it with CI/CD lets you optimize efficiently at scale."
+  },
+  {
+    "question": "You are working on Amazon ECR and need to encrypt docker container data using a symmetric KMS key without exposing the plaintext. Which API key do you use?",
+    "answer": "A) GenerateDataKeyWithoutPlaintext",
+    "explanation": "This API returns only the encrypted key, ideal for scenarios where the plaintext key must never be exposed but will be stored for later encryption."
+  },
+  {
+    "question": "You need to create an AW deployment for the compant to ensure that the comapnay adherer to relevant regulatory compliance laws. Which of these action will you perform to ensur ean AWS deployment that follows AWS best practices for infomration security and secure access (Pick TWO)?",
+    "answer": "Perform audit logging usign CloudTrail; Use S3 Glacier for archiving senstive data records."
+  },
+  {
+    "question": "You observe errors in the Lambda function through monitoring. The errors include runtime errors and nonsensical reuslts. You now need to perform remediation. Which of these would you look into for deubbing the Lambda Fucntion (Select TWO)?",
+    "answer": "Event payload values; Embedded user input"
+  },
+  {
+    "question_number": 1,
+    "question": "What is the maximum timeout for a Lambda function?",
+    "answer": "15 minutes",
+    "explanation": "AWS Lambda functions can run for up to 900 seconds (15 minutes).",
+    "domain": "Lambda"
+  },
+  {
+    "question_number": 2,
+    "question": "How do you monitor a Lambda function\u2019s performance?",
+    "answer": "Amazon CloudWatch",
+    "explanation": "CloudWatch collects metrics, logs, and traces for Lambda performance and debugging.",
+    "domain": "Lambda"
+  },
+  {
+    "question_number": 3,
+    "question": "What are Lambda Layers used for?",
+    "answer": "To share common code across functions",
+    "explanation": "Layers allow you to package libraries and dependencies and reuse them across Lambda functions.",
+    "domain": "Lambda"
+  },
+  {
+    "question_number": 4,
+    "question": "What is a DynamoDB Global Secondary Index?",
+    "answer": "An index with a different key schema",
+    "explanation": "GSI allows queries using alternate keys and supports eventual consistency.",
+    "domain": "DynamoDB"
+  },
+  {
+    "question_number": 5,
+    "question": "What feature automatically deletes expired items in DynamoDB?",
+    "answer": "Time to Live (TTL)",
+    "explanation": "TTL allows you to define an expiry timestamp on items for auto-deletion.",
+    "domain": "DynamoDB"
+  },
+  {
+    "question_number": 6,
+    "question": "What is provisioned throughput in DynamoDB?",
+    "answer": "Manually set read/write capacity",
+    "explanation": "It requires you to specify read and write units and manage capacity manually.",
+    "domain": "DynamoDB"
+  },
+  {
+    "question_number": 7,
+    "question": "What is a usage plan in API Gateway?",
+    "answer": "It controls access and quotas for APIs",
+    "explanation": "Usage plans specify throttling limits and API keys for developers.",
+    "domain": "API Gateway"
+  },
+  {
+    "question_number": 8,
+    "question": "How can you deploy API Gateway changes?",
+    "answer": "Using stages",
+    "explanation": "API Gateway uses stages (e.g. dev, prod) to manage deployments and versions.",
+    "domain": "API Gateway"
+  },
+  {
+    "question_number": 9,
+    "question": "What is the benefit of using REST APIs over HTTP APIs in API Gateway?",
+    "answer": "More features like request validation",
+    "explanation": "REST APIs support API keys, usage plans, request validation, etc.",
+    "domain": "API Gateway"
+  },
+  {
+    "question_number": 10,
+    "question": "What does a resource-based IAM policy do?",
+    "answer": "Grants permissions on a resource",
+    "explanation": "Unlike identity-based policies, resource-based policies attach directly to AWS resources.",
+    "domain": "Security"
+  },
+  {
+    "question_number": 11,
+    "question": "What is the principle of least privilege?",
+    "answer": "Grant only necessary permissions",
+    "explanation": "It limits the risk of overexposure by assigning minimal access.",
+    "domain": "Security"
+  },
+  {
+    "question_number": 12,
+    "question": "What service helps store and rotate secrets?",
+    "answer": "AWS Secrets Manager",
+    "explanation": "Secrets Manager securely stores API keys, passwords, and rotates secrets automatically.",
+    "domain": "Security"
+  },
+  {
+    "question_number": 13,
+    "question": "What is the purpose of AWS CodeDeploy?",
+    "answer": "Automate application deployments",
+    "explanation": "CodeDeploy supports EC2, Lambda, and on-premises deployments with rollback support.",
+    "domain": "Developer Tools"
+  },
+  {
+    "question_number": 14,
+    "question": "What does AWS CodeBuild do?",
+    "answer": "Compiles source code and runs tests",
+    "explanation": "CodeBuild is a fully managed build service integrated with CodePipeline.",
+    "domain": "Developer Tools"
+  },
+  {
+    "question_number": 15,
+    "question": "What is an artifact in CI/CD?",
+    "answer": "Output of a build process",
+    "explanation": "Artifacts are files (e.g. .zip, binaries) produced during builds and used for deployment.",
+    "domain": "Developer Tools"
+  },
+  {
+    "question_number": 16,
+    "question": "What is a CloudWatch alarm?",
+    "answer": "Triggers actions based on metrics",
+    "explanation": "Alarms watch metrics and can send notifications or take action when thresholds are met.",
+    "domain": "Monitoring"
+  },
+  {
+    "question_number": 17,
+    "question": "What are CloudWatch custom metrics?",
+    "answer": "User-defined metrics you can publish",
+    "explanation": "You can publish app-specific metrics for detailed monitoring.",
+    "domain": "Monitoring"
+  },
+  {
+    "question_number": 18,
+    "question": "How can you visualize trends in CloudWatch Logs?",
+    "answer": "Use CloudWatch Logs Insights",
+    "explanation": "This tool allows querying logs with a powerful SQL-like syntax.",
+    "domain": "Monitoring"
+  },
+  {
+    "question_number": 19,
+    "question": "What is the max retention period for messages in SQS?",
+    "answer": "14 days",
+    "explanation": "SQS messages can be retained between 60 seconds and 14 days.",
+    "domain": "Messaging"
+  },
+  {
+    "question_number": 20,
+    "question": "How does long polling improve SQS efficiency?",
+    "answer": "Waits for messages before responding",
+    "explanation": "It reduces empty responses and lowers cost by minimizing unnecessary polling.",
+    "domain": "Messaging"
+  },
+  {
+    "question_number": 21,
+    "question": "What is message visibility timeout in SQS?",
+    "answer": "Time before message is visible again",
+    "explanation": "Controls how long a message remains hidden after being received.",
+    "domain": "Messaging"
+  },
+  {
+    "question_number": 22,
+    "question": "What is a rule in Amazon EventBridge?",
+    "answer": "Matches events and routes to targets",
+    "explanation": "Rules use pattern matching to route incoming events to Lambda, SQS, etc.",
+    "domain": "EventBridge/SNS"
+  },
+  {
+    "question_number": 23,
+    "question": "How does SNS fan-out architecture work?",
+    "answer": "Sends messages to multiple subscribers",
+    "explanation": "A single publish action delivers the message to all subscribed endpoints.",
+    "domain": "EventBridge/SNS"
+  },
+  {
+    "question_number": 24,
+    "question": "What protocol types does SNS support?",
+    "answer": "HTTP/S, email, SMS, Lambda, SQS",
+    "explanation": "SNS can notify various endpoint types for event-driven architecture.",
+    "domain": "EventBridge/SNS"
+  },
+  {
+    "question_number": 25,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 26,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 27,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 28,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 29,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 30,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 31,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 32,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 33,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 34,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 35,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 36,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 38,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 39,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 40,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 42,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 46,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 47,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 48,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 50,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 51,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 57,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 58,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 59,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 60,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 61,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 62,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 63,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 64,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 65,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 66,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 67,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 68,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 69,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 70,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 71,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 72,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 73,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 74,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 75,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 76,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 77,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 78,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 79,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 80,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 81,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 82,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 83,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 84,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 85,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 86,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 87,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 88,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 89,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 90,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 91,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 92,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 93,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 94,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 95,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 96,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 97,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 98,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 99,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 100,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 101,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 102,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 103,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 104,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 105,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 106,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 107,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 108,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 111,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 112,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 113,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 114,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 115,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 116,
+    "question": "What is the default event source for CloudWatch Events?",
+    "answer": "AWS services",
+    "explanation": "Most AWS services automatically publish events to CloudWatch/EventBridge.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 117,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 118,
+    "question": "What AWS service can be used for GraphQL APIs?",
+    "answer": "AWS AppSync",
+    "explanation": "AppSync simplifies development of GraphQL APIs with real-time capabilities.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 119,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  },
+  {
+    "question_number": 120,
+    "question": "What is the max size of a Lambda deployment package?",
+    "answer": "50 MB zipped (direct upload)",
+    "explanation": "You can upload up to 250 MB unzipped using S3 or container images.",
+    "domain": "Misc"
+  }
+]
