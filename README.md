@@ -22,7 +22,7 @@ This is a cross-platform flashcard study app built with [Electron](https://www.e
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/flashcard-app.git
+git clone https://github.com/smcc1213/flashcard-app.git
 cd flashcard-app
 ```
 
